@@ -23,7 +23,7 @@ I am a third-year PhD student whose research spans Large Language Models(LLMs), 
 
 
 # 🔥 News
-- *2022.06*: &nbsp;🎉🎉 Invited given talk on SIGMETRICS 2025. 
+- *2025.06*: &nbsp;🎉🎉 Invited given talk on SIGMETRICS 2025. 
 - *2025.05*: &nbsp;🎉🎉 One paper has benn accepted by ICML 2025. 
 
 # 📝 Selected Publications 
