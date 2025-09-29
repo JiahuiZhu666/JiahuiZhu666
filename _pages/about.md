@@ -28,7 +28,7 @@ I am a third-year PhD student whose research spans Large Language Models(LLMs), 
 
 # 📝 Selected Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Online Constrained Markov Decision Processes](https://openreview.net/forum?id=fFgiXamW8E)
