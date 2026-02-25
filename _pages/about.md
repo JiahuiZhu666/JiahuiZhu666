@@ -18,15 +18,25 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
-I am a third-year PhD student whose research spans Large Language Models(LLMs), reinforcement learning, and constrained optimization. I develop methods for preference-based fine-tuning and safe policy learning, with an emphasis on reference-aware training, constraint satisfaction, and sample-efficient optimization. My recent projects explore reliable alignment objectives for LLMs and primal–dual or mirror-descent approaches for constrained decision-making, seeking both strong empirical performance and provable guarantees. Ultimately, I aim to bridge theory and practice to make foundation models more robust, controllable, and trustworthy.
+My current interests lie at the intersection of **LLM reasoning, reinforcement learning, and constrained optimization**. Broadly, I work on topics including LLM alignment , Constrained Reinforcement Learning, and Bandits. Please refer to my recent publications for further details.
 
 
 
 # 🔥 News
-- *2025.06*: &nbsp;🎉🎉 Invited to give a talk at SIGMETRICS 2025.
-- *2025.05*: &nbsp;🎉🎉 One paper has been accepted by ICML 2025. 
+- *2026.01*: &nbsp;🎉🎉 One paper has been accepted by **ICLR 2026**.
+- *2026.01*: &nbsp;🎉🎉 Invited to give a talk at Washington State University on **Score Matching**.
+- *2025.06*: &nbsp;🎉🎉 Invited to give a talk at **SIGMETRICS 2025**.
+- *2025.05*: &nbsp;🎉🎉 One paper has been accepted by **ICML 2025**. 
 
 # 📝 Selected Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/rappo.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Keep the Best, Forget the Rest: Reliable Alignment with Order-Aware Preference Optimization](https://openreview.net/forum?id=LrHfYPFTtg&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))
+**Jiahui Zhu**, Yuanjie Shi, Xiyue Peng, Xin Liu, Yan Yan, Honghao Wei
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/icml2025_poster_3_modify2-1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -42,4 +52,5 @@ I am a third-year PhD student whose research spans Large Language Models(LLMs), 
 - *2021.08 - 2023.01*, Boston University
 
 # 💬 Invited Talks
+- *2026.01*, GenAI Seminar, Washington State University
 - *2025.06*, SIGMETRICS 2025
