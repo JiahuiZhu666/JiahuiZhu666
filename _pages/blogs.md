@@ -1,6 +1,7 @@
 ---
+layout: default
 title: "Blogs"
-permalink: /blogs/
+permalink: /blogs.html
 author_profile: true
 ---
 
