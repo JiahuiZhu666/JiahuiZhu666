@@ -54,5 +54,6 @@ My current interests lie at the intersection of **LLM reasoning, reinforcement l
 - *2021.08 - 2023.01*, Boston University
 
 # 💬 Invited Talks
+- *2026.04*, Generative Pre-Training, Washington State University
 - *2026.01*, GenAI Seminar, Washington State University
 - *2025.06*, SIGMETRICS 2025
