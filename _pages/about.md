@@ -33,12 +33,24 @@ My current interests lie at the intersection of **LLM reasoning, reinforcement l
 # 📝 Selected Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMLR 2026</div><img src='images/rappo.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">TMLR 2026</div>
+      <img src='images/rappo.png' alt="sym" width="100%">
+    </div>
+  </div>
 
-[Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning](https://openreview.net/pdf?id=4KYrv6qYMl)
+  <div class='paper-box-text' markdown="1">
+
+[Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning](https://openreview.net/pdf?id=4KYrv6qYMl)  
 **Jiahui Zhu**, Honghao Wei, Lei Ying
-</div>
+
+<a href="https://www.youtube.com/watch?v=tDpWq2EV_Ig" target="_blank" class="btn btn--primary btn--small" style="margin-top:8px; display:inline-block;">
+  Video
+</a>
+
+  </div>
 </div>
 
 
