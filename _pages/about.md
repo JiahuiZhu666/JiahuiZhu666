@@ -23,6 +23,7 @@ My current interests lie at the intersection of **LLM reasoning, reinforcement l
 
 
 # 🔥 News
+- *2026.04*: &nbsp;🎉🎉 One paper has been accepted by **TMLR 2026**.
 - *2026.04*: &nbsp;🎉🎉 Invited to give a talk at Washington State University on **Generative Pre-Training**.(See *Blogs* for more details)
 - *2026.01*: &nbsp;🎉🎉 One paper has been accepted by **ICLR 2026**.
 - *2026.01*: &nbsp;🎉🎉 Invited to give a talk at Washington State University on **Score Matching**.(See *Blogs* for more details)
