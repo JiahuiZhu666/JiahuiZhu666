@@ -37,7 +37,7 @@ My current interests lie at the intersection of **LLM reasoning, reinforcement l
   <div class='paper-box-image'>
     <div>
       <div class="badge">TMLR 2026</div>
-      <img src='images/rappo.png' alt="sym" width="100%">
+      <img src='images/aaai_new_performance_at[-0.8,-1.5].png' alt="sym" width="100%">
     </div>
   </div>
 
