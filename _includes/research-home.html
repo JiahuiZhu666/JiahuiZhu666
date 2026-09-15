@@ -1,11 +1,10 @@
 <section id="about" class="content-section about-section">
-  <p class="eyebrow">A LITTLE ABOUT ME</p>
   <h2>About Me</h2>
   <p class="intro">Hi there! I’m <strong>Jiahui Zhu</strong> <span class="wave" aria-hidden="true">👋</span></p>
   <p>My current interests lie at the intersection of <strong>LLM reasoning, reinforcement learning, and constrained optimization</strong>. Broadly, I work on LLM alignment, constrained reinforcement learning, and bandits.</p>
   <div class="education-grid">
     {% for education in site.data.profile.education %}<div class="education-card">
-      <span class="school-monogram {% if forloop.last %}bu{% endif %}" aria-hidden="true">{% if forloop.first %}WSU{% else %}BU{% endif %}</span>
+      <span class="school-logo"><img src="{% if forloop.first %}{{ '/images/schools/wsu-logo.svg' | relative_url }}{% else %}{{ '/images/schools/bu-logo.png' | relative_url }}{% endif %}" alt="{{ education.institution }} logo" width="76" height="64" loading="lazy"></span>
       <div><h3>{{ education.institution }}</h3><p class="date">{{ education.start | replace: '-', '.' }} — {% if education.end %}{{ education.end | replace: '-', '.' }}{% else %}Present{% endif %}</p></div>
     </div>{% endfor %}
   </div>
@@ -55,8 +54,9 @@
   </article>
   {% endif %}{% endfor %}{% endfor %}
 </section>
-<section id="writing" class="content-section">
-  <div class="section-heading"><h2>Writing & Notes</h2><a class="small-link" href="{{ '/blogs.html' | relative_url }}">All posts ↗</a></div>
+<section id="blogs" class="content-section">
+  <span id="writing" class="legacy-anchor" aria-hidden="true"></span>
+  <div class="section-heading"><h2>Blogs</h2><a class="small-link" href="{{ '/blogs.html' | relative_url }}">All posts ↗</a></div>
   <div class="writing-list">
     <a class="writing-card" href="{{ '/generative-pre-training.html' | relative_url }}"><div><p class="eyebrow">PRESENTATION · APR 2026</p><h3>Generative Pre-Training</h3><p>Seminar slides from Washington State University.</p></div><span aria-hidden="true">↗</span></a>
     <a class="writing-card" href="{{ '/grpo-kl.html' | relative_url }}"><div><p class="eyebrow">TECHNICAL NOTE · MAR 2026</p><h3>A closer look at the KL term in GRPO</h3><p>Why use r − log r − 1 instead of the log ratio?</p></div><span aria-hidden="true">↗</span></a>

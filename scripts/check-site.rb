@@ -44,7 +44,7 @@ documents.each do |path, doc|
 end
 home = documents[File.join(root, 'index.html')]
 errors << 'Expected exactly three publications' unless home && home.css('.paper-card').length == 3
-errors << 'Expected three writing links' unless home && home.css('#writing .writing-card').length == 3
+errors << 'Expected three blog links' unless home && home.css('#blogs .writing-card').length == 3
 %w[generative-pre-training.html score-matching.html grpo-kl.html blogs.html my-presentation.html].each do |page|
   errors << "Missing page #{page}" unless documents.key?(File.join(root, page))
 end

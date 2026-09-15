@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Writing & Notes"
+title: "Blogs"
 permalink: /blogs.html
 ---
 

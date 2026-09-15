@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title and page.title != "" %}{{ page.title | escape }} · {% endif %}Jiahui Zhu</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <meta name="theme-color" content="#faf9f7">
+  <meta name="theme-color" content="#81d8d0">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="{% if page.home %}website{% else %}article{% endif %}">
   <meta property="og:title" content="{% if page.title and page.title != '' %}{{ page.title | escape }} · {% endif %}Jiahui Zhu">
@@ -33,7 +33,7 @@
   <header class="topbar"><div class="topbar-inner">
     <a class="brand" href="{{ '/' | relative_url }}">Jiahui Zhu<span aria-hidden="true">.</span></a>
     <nav class="site-nav" aria-label="Main navigation">
-      {% assign nav_items = 'about:About,news:News,publications:Publications,writing:Writing,talks:Talks' | split: ',' %}
+      {% assign nav_items = 'about:About,news:News,publications:Publications,blogs:Blogs,talks:Talks' | split: ',' %}
       {% for item in nav_items %}{% assign nav = item | split: ':' %}
       <a href="{% unless page.home %}{{ '/' | relative_url }}{% endunless %}#{{ nav[0] }}" data-section="{{ nav[0] }}">{{ nav[1] }}</a>
       {% endfor %}
@@ -46,21 +46,24 @@
       <h1>Jiahui Zhu</h1>
       <p class="profile-affiliation">Washington State<br>University</p>
       <p class="profile-location">Pullman, Washington</p>
-      <a class="profile-email" href="mailto:jiahui.zhu@wsu.edu">jiahui.zhu@wsu.edu</a>
-      <div class="social-links"><a href="{{ site.data.profile.profile.scholar }}" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a><a href="{{ site.data.profile.profile.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      <div class="social-links">
+        <a href="mailto:jiahui.zhu@wsu.edu" aria-label="Email Jiahui Zhu" title="jiahui.zhu@wsu.edu"><span class="contact-icon icon-email" aria-hidden="true"></span></a>
+        <a href="{{ site.data.profile.profile.scholar }}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><span class="contact-icon icon-scholar" aria-hidden="true"></span></a>
+        <a href="{{ site.data.profile.profile.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><span class="contact-icon icon-linkedin" aria-hidden="true"></span></a>
+      </div>
       <div class="profile-topics"><span>LLM Reasoning</span><span>Reinforcement Learning</span><span>Constrained Optimization</span></div>
       <a class="contact-link" href="mailto:jiahui.zhu@wsu.edu">Get in touch <span aria-hidden="true">↗</span></a>
     </div><p class="sidebar-note">Reasoning. Learning. Decisions.</p></aside>
     <main id="main" class="main-content" tabindex="-1">
       {% if page.home %}{{ content }}{% else %}
-      <a class="back-link" href="{{ '/' | relative_url }}#writing">← Back to home</a>
+      <a class="back-link" href="{{ '/' | relative_url }}#blogs">← Back to home</a>
       <article class="article-content">
         {% unless page.hide_title %}<h1>{{ page.title }}</h1>{% endunless %}
         {% if page.date %}<p class="article-date">{{ page.date | date: '%B %d, %Y' }}</p>{% endif %}
         {{ content }}
       </article>
       {% endif %}
-      <footer class="site-footer"><span>© {{ site.time | date: '%Y' }} Jiahui Zhu</span><a href="mailto:jiahui.zhu@wsu.edu">Let’s connect ↗</a></footer>
+      <footer class="site-footer"><span>© {{ site.time | date: '%Y' }} Jiahui Zhu</span></footer>
     </main>
   </div>
   <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>

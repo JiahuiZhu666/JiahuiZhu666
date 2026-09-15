@@ -31,4 +31,8 @@ Publishing to the original GitHub repository requires a push; local changes do n
 
 `bash scripts/build-preview.sh` produces the separate Sites build in `dist/`, using `_config.preview.yml`. It retains the original GitHub Pages build and base path. `worker/index.js` serves the generated assets and derives social metadata from the incoming host. `bundle exec ruby scripts/check-site.rb` checks the GitHub Pages build for missing routes, files, and anchors.
 
-The sharing image is `images/og.png`, generated with the built-in image-generation tool. Brief: warm ivory dot grid, terracotta accents, Space Grotesk-like typography; exact name “Jiahui Zhu”, affiliation “Washington State University”, and research areas “LLM Reasoning · Reinforcement Learning” / “Constrained Optimization”, with three restrained numbered research panels. The portrait and scientific figures are the original supplied assets.
+The sharing image is `images/og.png`, generated with the built-in image-generation tool. Current edit brief: preserve all text, typography and layout; replace terracotta with Tiffany blue #81D8D0 and readable teal #087F78, use a cool near-white background #F7FCFB, and preserve the exact name, affiliation and research areas. The portrait and scientific figures are the original supplied assets.
+
+The site uses a Tiffany blue palette, slightly larger type, full-width publication figures, and a Blogs section. Contact icons reuse the bundled Font Awesome and Academicons fonts, with accessible names and hover labels.
+
+School logo sources: the WSU cougar SVG is extracted from the official https://www.wsu.edu/ homepage; the Boston University plate is from https://www.bu.edu/home/img/masterplate112x50-retina.png, referenced by its homepage stylesheet. Logos retain their university colors and proportions.
