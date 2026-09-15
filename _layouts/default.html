@@ -33,7 +33,7 @@
   <header class="topbar"><div class="topbar-inner">
     <a class="brand" href="{{ '/' | relative_url }}">Jiahui Zhu<span aria-hidden="true">.</span></a>
     <nav class="site-nav" aria-label="Main navigation">
-      {% assign nav_items = 'about:About,news:News,publications:Publications,blogs:Blogs,talks:Talks' | split: ',' %}
+      {% assign nav_items = 'about:About,experience:Experience,news:News,publications:Publications,blogs:Blogs,talks:Talks' | split: ',' %}
       {% for item in nav_items %}{% assign nav = item | split: ':' %}
       <a href="{% unless page.home %}{{ '/' | relative_url }}{% endunless %}#{{ nav[0] }}" data-section="{{ nav[0] }}">{{ nav[1] }}</a>
       {% endfor %}

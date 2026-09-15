@@ -10,6 +10,20 @@
   </div>
   <p class="collaboration-note">Find my recent work below, or <a href="mailto:jiahui.zhu@wsu.edu">get in touch</a> to discuss research.</p>
 </section>
+<section id="experience" class="content-section">
+  <h2>Experience</h2>
+  {% for experience in site.data.profile.experience %}
+  <article class="experience-card">
+    <div class="experience-heading">
+      <h3>{{ experience.company }}</h3>
+      <p class="date"><time datetime="{{ experience.start }}">{{ experience.start | append: '-01' | date: '%b %Y' }}</time> — {% if experience.end %}<time datetime="{{ experience.end }}">{{ experience.end | append: '-01' | date: '%b %Y' }}</time>{% else %}Present{% endif %}</p>
+    </div>
+    <p class="experience-role"><strong>{{ experience.role }}</strong><span class="tag">{{ experience.type }}</span></p>
+    <p class="experience-location">{{ experience.location }}</p>
+    <p class="experience-description">{{ experience.description }}</p>
+  </article>
+  {% endfor %}
+</section>
 <section id="research" class="content-section">
   <h2>Research Interests</h2>
   <p class="section-intro">Learning and decision-making, from language models to sequential decisions.</p>

@@ -44,8 +44,20 @@ documents.each do |path, doc|
   end
 end
 home = documents[File.join(root, 'index.html')]
-expected_papers = JSON.parse(File.read(File.expand_path('../_data/profile.json', __dir__))).fetch('publications')
+profile = JSON.parse(File.read(File.expand_path('../_data/profile.json', __dir__)))
+expected_papers = profile.fetch('publications')
 errors << 'Publication count does not match source data' unless home && home.css('.paper-card').length == expected_papers.length
+experiences = profile.fetch('experience')
+cards = home ? home.css('#experience .experience-card') : []
+errors << 'Experience count does not match source data' unless cards.length == experiences.length
+experiences.zip(cards).each do |experience, card|
+  %w[company role type location description].each do |field|
+    errors << "Experience missing #{field}" unless card && card.text.include?(experience.fetch(field))
+  end
+  errors << 'Experience start date missing' unless card && card.css('time').any? { |time| time['datetime'] == experience.fetch('start') }
+  errors << 'Current experience must say Present' if experience['end'].nil? && !(card && card.text.include?('Present'))
+end
+errors << 'Experience navigation missing' unless home && home.at_css('.site-nav a[data-section="experience"]')
 errors << 'Expected three blog links' unless home && home.css('#blogs .writing-card').length == 3
 %w[generative-pre-training.html score-matching.html grpo-kl.html blogs.html my-presentation.html].each do |page|
   errors << "Missing page #{page}" unless documents.key?(File.join(root, page))

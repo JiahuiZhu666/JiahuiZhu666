@@ -279,6 +279,38 @@ section[id],article[id],h3[id] {
   font-size:12px;
   color:var(--muted);
   margin:0}
+.experience-card {
+  padding:22px;
+  margin-bottom:14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:3px solid var(--highlight);
+  border-radius:13px;
+  box-shadow:var(--shadow)}
+.experience-heading {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  margin-bottom:10px}
+.experience-heading h3 {
+  font-size:22px;
+  margin:0}
+.experience-heading .date {
+  font-size:13px}
+.experience-role {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:5px}
+.experience-location {
+  color:var(--muted);
+  font-size:15px;
+  margin-bottom:14px}
+.experience-description {
+  margin:0}
 .collaboration-note {
   font-size:15px;
   color:var(--muted)}

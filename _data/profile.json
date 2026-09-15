@@ -67,6 +67,17 @@
     {"date": "2025-06", "text": "Invited to give a talk at SIGMETRICS 2025."},
     {"date": "2025-05", "text": "One paper has been accepted by ICML 2025."}
   ],
+  "experience": [
+    {
+      "company": "ByteDance",
+      "role": "Research Scientist",
+      "type": "Internship",
+      "location": "San Jose, CA",
+      "start": "2026-07",
+      "end": null,
+      "description": "Developing AI agents to optimize advertising operations."
+    }
+  ],
   "education": [
     {"institution": "Washington State University", "start": "2023-08", "end": null, "originalEnd": "now"},
     {"institution": "Boston University", "start": "2021-08", "end": "2023-01"}
