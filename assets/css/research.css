@@ -328,6 +328,15 @@ section[id],article[id],h3[id] {
   background:var(--tint);
   font-size:12px;
   font-weight:500}
+.research-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.research-tags a:hover {
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 .news-list {
   list-style:none;
   padding:0;

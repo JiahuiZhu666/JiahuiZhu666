@@ -26,11 +26,11 @@
       "year": 2026,
       "title": "Boundary-Seeking Policy Gradient for Safe Reinforcement Learning",
       "authors": ["Chenhua Fan", "Jiahui Zhu", "Yuhang Zhang", "Honghao Wei"],
-      "image": "images/bspg-cdc2026.png",
-      "image_alt": "Figure 2: BSPG and ESPO update trajectories on a synthetic constrained problem, illustrating BSPG approaching the active constraint boundary.",
+      "image": "images/bspg-cdc2026-fig1.png",
+      "image_alt": "Figure 1: Local update geometry of ESPO and BSPG on the feasible and infeasible sides of the active constraint boundary.",
       "paper": "https://arxiv.org/pdf/2608.10204",
       "citation_key": "fan2026boundary",
-      "image_source": "https://arxiv.org/html/2608.10204v1/result/small_bspg_vs_espo_trajectory.png"
+      "image_source": "https://arxiv.org/html/2608.10204v1/result/bspg_vs_espo_1x4_circular_fixed.png"
     },
     {
       "venue": "TMLR",
@@ -59,6 +59,7 @@
     }
   ],
   "news": [
+    {"date": "2026-07", "text": "Boundary-Seeking Policy Gradient for Safe Reinforcement Learning was accepted to IEEE CDC 2026."},
     {"date": "2026-04", "text": "One paper has been accepted by TMLR 2026."},
     {"date": "2026-04", "text": "Invited to give a talk at Washington State University on Generative Pre-Training."},
     {"date": "2026-01", "text": "One paper has been accepted by ICLR 2026."},
