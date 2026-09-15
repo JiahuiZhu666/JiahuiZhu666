@@ -1,0 +1,73 @@
+<section id="about" class="content-section about-section">
+  <p class="eyebrow">A LITTLE ABOUT ME</p>
+  <h2>About Me</h2>
+  <p class="intro">Hi there! I’m <strong>Jiahui Zhu</strong> <span class="wave" aria-hidden="true">👋</span></p>
+  <p>My current interests lie at the intersection of <strong>LLM reasoning, reinforcement learning, and constrained optimization</strong>. Broadly, I work on LLM alignment, constrained reinforcement learning, and bandits.</p>
+  <div class="education-grid">
+    {% for education in site.data.profile.education %}<div class="education-card">
+      <span class="school-monogram {% if forloop.last %}bu{% endif %}" aria-hidden="true">{% if forloop.first %}WSU{% else %}BU{% endif %}</span>
+      <div><h3>{{ education.institution }}</h3><p class="date">{{ education.start | replace: '-', '.' }} — {% if education.end %}{{ education.end | replace: '-', '.' }}{% else %}Present{% endif %}</p></div>
+    </div>{% endfor %}
+  </div>
+  <p class="collaboration-note">Find my recent work below, or <a href="mailto:jiahui.zhu@wsu.edu">get in touch</a> to discuss research.</p>
+</section>
+<section id="research" class="content-section">
+  <h2>Research Interests</h2>
+  <p class="section-intro">Learning and decision-making, from language models to sequential decisions.</p>
+  <div class="research-directions">
+    <a class="research-card" href="#paper-iclr-2026"><span class="direction-number">01</span><div><h3>LLM reasoning & alignment</h3><p>Reasoning in language models and reliable alignment through preference optimization.</p><span class="tag">Preference optimization ↗</span></div></a>
+    <a class="research-card" href="#paper-tmlr-2026"><span class="direction-number">02</span><div><h3>Safe reinforcement learning</h3><p>Value learning and policy optimization under safety constraints.</p><span class="tag">Offline safe RL ↗</span></div></a>
+    <a class="research-card" href="#paper-icml-2025"><span class="direction-number">03</span><div><h3>Constrained decision-making</h3><p>Constrained optimization, Markov decision processes, and bandits.</p><span class="tag">Online constrained MDPs ↗</span></div></a>
+  </div>
+</section>
+<section id="news" class="content-section">
+  <h2>News</h2>
+  <ul class="news-list">
+    <li><time datetime="2026-04">Apr 2026</time><span>Our paper on <a href="#paper-tmlr-2026">offline safe reinforcement learning</a> was accepted to <strong>TMLR 2026</strong>.</span></li>
+    <li><time datetime="2026-04">Apr 2026</time><span>Invited to speak on <a href="{{ '/generative-pre-training.html' | relative_url }}">Generative Pre-Training</a> at Washington State University.</span></li>
+    <li><time datetime="2026-01">Jan 2026</time><span><a href="#paper-iclr-2026">Keep the Best, Forget the Rest</a> was accepted to <strong>ICLR 2026</strong>.</span></li>
+    <li><time datetime="2026-01">Jan 2026</time><span>Invited to speak on <a href="{{ '/score-matching.html' | relative_url }}">Score Matching</a> at Washington State University.</span></li>
+  </ul>
+  <details class="news-more"><summary><span class="when-closed">Show more news</span><span class="when-open">Show less news</span><span class="chevron" aria-hidden="true">⌄</span></summary><ul class="news-list"><li><time datetime="2025-06">Jun 2025</time><span>Invited to give a talk at <strong>SIGMETRICS 2025</strong>.</span></li><li><time datetime="2025-05">May 2025</time><span><a href="#paper-icml-2025">Online Constrained Markov Decision Processes</a> was accepted to <strong>ICML 2025</strong>.</span></li></ul></details>
+</section>
+<section id="publications" class="content-section publications">
+  <div class="section-heading"><h2>Selected Publications</h2><a class="small-link" href="{{ site.data.profile.profile.scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
+  <nav class="year-nav" aria-label="Publication years"><a href="#year-2026">2026</a><a href="#year-2025">2025</a></nav>
+  {% assign years = '2026,2025' | split: ',' %}{% for year in years %}
+  <h3 id="year-{{ year }}" class="year-heading">{{ year }}<span></span></h3>
+  {% for paper in site.data.profile.publications %}{% assign paper_year = paper.year | append: '' %}{% if paper_year == year %}
+  <article id="paper-{{ paper.venue | downcase }}-{{ paper.year }}" class="paper-card">
+    <a class="paper-image-link" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure for {{ paper.title | escape }}"><span class="venue-badge">{{ paper.venue }} {{ paper.year }}</span><img src="{{ paper.image | relative_url }}" alt="Research figure for {{ paper.title | escape }}" loading="lazy"><span class="figure-hint">View figure ↗</span></a>
+    <div class="paper-info">
+      <h4><a href="{{ paper.paper }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h4>
+      <p class="authors">{% for author in paper.authors %}{% if author == 'Jiahui Zhu' %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      <p class="venue-name">{% case paper.venue %}{% when 'TMLR' %}Transactions on Machine Learning Research{% when 'ICLR' %}International Conference on Learning Representations{% when 'ICML' %}International Conference on Machine Learning{% endcase %}, {{ paper.year }}.</p>
+      <div class="paper-links"><a href="{{ paper.paper }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>{% if paper.video %}<a href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video ↗</a>{% endif %}
+        <details class="citation"><summary>BibTeX</summary><div class="citation-panel"><button class="copy-citation" type="button">Copy</button><pre><code>@{% if paper.venue == 'TMLR' %}article{% else %}inproceedings{% endif %}{zhu{{ paper.year }}{{ paper.venue | downcase }},
+  title = { {{- paper.title -}} },
+  author = { {{- paper.authors | join: ' and ' -}} },
+  {% if paper.venue == 'TMLR' %}journal{% else %}booktitle{% endif %} = { {{- paper.venue -}} },
+  year = { {{- paper.year -}} },
+  url = { {{- paper.paper -}} }
+}</code></pre></div></details>
+      </div>
+    </div>
+  </article>
+  {% endif %}{% endfor %}{% endfor %}
+</section>
+<section id="writing" class="content-section">
+  <div class="section-heading"><h2>Writing & Notes</h2><a class="small-link" href="{{ '/blogs.html' | relative_url }}">All posts ↗</a></div>
+  <div class="writing-list">
+    <a class="writing-card" href="{{ '/generative-pre-training.html' | relative_url }}"><div><p class="eyebrow">PRESENTATION · APR 2026</p><h3>Generative Pre-Training</h3><p>Seminar slides from Washington State University.</p></div><span aria-hidden="true">↗</span></a>
+    <a class="writing-card" href="{{ '/grpo-kl.html' | relative_url }}"><div><p class="eyebrow">TECHNICAL NOTE · MAR 2026</p><h3>A closer look at the KL term in GRPO</h3><p>Why use r − log r − 1 instead of the log ratio?</p></div><span aria-hidden="true">↗</span></a>
+    <a class="writing-card" href="{{ '/score-matching.html' | relative_url }}"><div><p class="eyebrow">PRESENTATION · FEB 2026</p><h3>Score Matching</h3><p>Slides and notes on score matching.</p></div><span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+<section id="talks" class="content-section">
+  <h2>Invited Talks</h2>
+  <div class="talk-timeline">
+    <div class="talk-item"><time datetime="2026-04">Apr 2026</time><div><h3><a href="{{ '/generative-pre-training.html' | relative_url }}">Generative Pre-Training ↗</a></h3><p>Washington State University</p></div></div>
+    <div class="talk-item"><time datetime="2026-01">Jan 2026</time><div><h3>GenAI Seminar</h3><p>Washington State University</p></div></div>
+    <div class="talk-item"><time datetime="2025-06">Jun 2025</time><div><h3>SIGMETRICS 2025</h3><p>Invited talk</p></div></div>
+  </div>
+</section>

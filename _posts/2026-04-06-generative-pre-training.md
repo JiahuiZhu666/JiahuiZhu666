@@ -1,11 +1,14 @@
 ---
-title: "Discuss on Generative Pre-Training"
-author_profile: true
-permalink: /my-presentation.html
+title: "Generative Pre-Training"
+permalink: /generative-pre-training.html
+redirect_from:
+  - /my-presentation.html
 ---
 
-Recent presentation about Generative Pre-Training
+Presentation on Generative Pre-Training at Washington State University.
 
-<iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/JiahuiZhu666/JiahuiZhu666/main/docs/Generative_Pre_Training.pdf&embedded=true" width="100%" height="600px" style="border: 1px solid #eee; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-</iframe>
+<div class="pdf-actions"><a class="button primary" href="{{ '/files/Generative_Pre_Training.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Open slides ↗</a><a class="button" href="{{ '/files/Generative_Pre_Training.pdf' | relative_url }}" download>Download PDF ↓</a></div>
 
+<iframe class="pdf-viewer" title="Generative Pre-Training presentation slides" src="{{ '/files/Generative_Pre_Training.pdf' | relative_url }}"></iframe>
+
+<p class="pdf-fallback">If the slides don’t appear in your browser, use “Open slides” or download the PDF above.</p>

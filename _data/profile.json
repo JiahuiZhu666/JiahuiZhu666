@@ -1,0 +1,70 @@
+{
+  "source": {
+    "site": "https://jiahuizhu666.github.io/JiahuiZhu666/",
+    "repository": "https://github.com/jiahuizhu666/JiahuiZhu666",
+    "localPath": "/Users/bytedance/JiahuiZhu666",
+    "commit": "3f9f5ae7d0a3737fe57be398a56243b7bcc336ae",
+    "retrievedAt": "2026-09-14",
+    "assetPathsRelativeTo": "localPath"
+  },
+  "profile": {
+    "name": "Jiahui Zhu",
+    "originalDisplayName": "Jiahui ZHU",
+    "affiliation": "Washington State University",
+    "location": "Pullman, WA",
+    "email": "jiahui.zhu@wsu.edu",
+    "photo": "images/person.png",
+    "bio": "My current interests lie at the intersection of LLM reasoning, reinforcement learning, and constrained optimization. Broadly, I work on topics including LLM alignment, Constrained Reinforcement Learning, and Bandits. Please refer to my recent publications for further details.",
+    "scholar": "https://scholar.google.com/citations?user=irwaX1gAAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/jiahui-zhu-08ab66372/"
+  },
+  "publications": [
+    {
+      "venue": "TMLR",
+      "year": 2026,
+      "title": "Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning",
+      "authors": ["Jiahui Zhu", "Honghao Wei", "Lei Ying"],
+      "image": "images/aaai_new_performance_at[-0.8,-1.5].png",
+      "paper": "https://openreview.net/pdf?id=4KYrv6qYMl",
+      "video": "https://www.youtube.com/watch?v=tDpWq2EV_Ig"
+    },
+    {
+      "venue": "ICLR",
+      "year": 2026,
+      "title": "Keep the Best, Forget the Rest: Reliable Alignment with Order-Aware Preference Optimization",
+      "authors": ["Jiahui Zhu", "Yuanjie Shi", "Xiyue Peng", "Xin Liu", "Yan Yan", "Honghao Wei"],
+      "image": "images/rappo.png",
+      "paper": "https://openreview.net/forum?id=LrHfYPFTtg"
+    },
+    {
+      "venue": "ICML",
+      "year": 2025,
+      "title": "Online Constrained Markov Decision Processes",
+      "authors": ["Jiahui Zhu", "Kihyun Yu", "Dabeen Lee", "Xin Liu", "Honghao Wei"],
+      "image": "images/icml2025_poster_3_modify2-1.png",
+      "paper": "https://openreview.net/forum?id=fFgiXamW8E"
+    }
+  ],
+  "news": [
+    {"date": "2026-04", "text": "One paper has been accepted by TMLR 2026."},
+    {"date": "2026-04", "text": "Invited to give a talk at Washington State University on Generative Pre-Training."},
+    {"date": "2026-01", "text": "One paper has been accepted by ICLR 2026."},
+    {"date": "2026-01", "text": "Invited to give a talk at Washington State University on Score Matching."},
+    {"date": "2025-06", "text": "Invited to give a talk at SIGMETRICS 2025."},
+    {"date": "2025-05", "text": "One paper has been accepted by ICML 2025."}
+  ],
+  "education": [
+    {"institution": "Washington State University", "start": "2023-08", "end": null, "originalEnd": "now"},
+    {"institution": "Boston University", "start": "2021-08", "end": "2023-01"}
+  ],
+  "talks": [
+    {"date": "2026-04", "title": "Generative Pre-Training", "venue": "Washington State University", "pdf": "docs/Generative_Pre_Training.pdf"},
+    {"date": "2026-01", "title": "GenAI Seminar", "venue": "Washington State University"},
+    {"date": "2025-06", "title": "SIGMETRICS 2025"}
+  ],
+  "writing": [
+    {"date": "2026-04-06", "title": "Discuss on Generative Pre-Training", "source": "_posts/2026-04-06-generative-pre-training.md", "originalPermalink": "/my-presentation.html", "suggestedSlug": "generative-pre-training", "pdf": "docs/Generative_Pre_Training.pdf"},
+    {"date": "2026-03-05", "title": "Why GRPO Uses r - log r - 1 for the KL Term, Instead of Just log Ratio", "source": "_posts/2026-03-05-grpo-kl.md", "originalPermalink": "/grpo-kl.html", "suggestedSlug": "grpo-kl"},
+    {"date": "2026-02-09", "title": "Discuss on Score Matching", "source": "_posts/2026-02-09-score-matching.md", "originalPermalink": "/my-presentation.html", "suggestedSlug": "score-matching", "pdf": "docs/score_matching.pdf"}
+  ]
+}

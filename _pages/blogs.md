@@ -1,19 +1,13 @@
 ---
 layout: default
-title: "Blogs"
+title: "Writing & Notes"
 permalink: /blogs.html
-author_profile: true
 ---
 
-# My Blogs
+Technical notes, seminar slides, and research ideas.
 
-这里记录了我的技术笔记与日常思考。
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%Y-%m-%d" }}</span> — 
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="writing-list">
+{% for post in site.posts %}
+<a class="writing-card" href="{{ post.url | relative_url }}"><div><p class="eyebrow">{{ post.date | date: '%b %d, %Y' | upcase }}</p><h3>{{ post.title }}</h3></div><span aria-hidden="true">↗</span></a>
+{% endfor %}
+</div>

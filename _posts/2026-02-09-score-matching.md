@@ -1,10 +1,12 @@
 ---
-title: "Discuss on Score Matching"
-author_profile: true
-permalink: /my-presentation.html
+title: "Score Matching"
+permalink: /score-matching.html
 ---
 
-Recent presentation about Score Matching
+Presentation slides on Score Matching.
 
-<iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/JiahuiZhu666/JiahuiZhu666/main/docs/score_matching.pdf&embedded=true" width="100%" height="600px" style="border: 1px solid #eee; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-</iframe>
+<div class="pdf-actions"><a class="button primary" href="{{ '/files/score_matching.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Open slides ↗</a><a class="button" href="{{ '/files/score_matching.pdf' | relative_url }}" download>Download PDF ↓</a></div>
+
+<iframe class="pdf-viewer" title="Score Matching presentation slides" src="{{ '/files/score_matching.pdf' | relative_url }}"></iframe>
+
+<p class="pdf-fallback">If the slides don’t appear in your browser, use “Open slides” or download the PDF above.</p>

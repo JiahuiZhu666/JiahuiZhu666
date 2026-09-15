@@ -6,9 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Jerry"
-description              : ""
-repository               : "JiahuiZhu666/JiahuiZhu666.github.io"
+title                    : "Jiahui Zhu"
+description              : "Research in LLM reasoning, reinforcement learning, and constrained optimization at Washington State University."
+url                      : "https://jiahuizhu666.github.io"
+baseurl                  : "/JiahuiZhu666"
+repository               : "JiahuiZhu666/JiahuiZhu666"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -91,6 +93,10 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - scripts
+  - dist
+  - SITE-README.md
+  - worker
 keep_files:
   - .git
   - .svn
