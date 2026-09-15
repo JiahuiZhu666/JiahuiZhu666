@@ -20,6 +20,19 @@
   },
   "publications": [
     {
+      "venue": "CDC",
+      "venue_label": "IEEE CDC",
+      "venue_name": "IEEE Conference on Decision and Control",
+      "year": 2026,
+      "title": "Boundary-Seeking Policy Gradient for Safe Reinforcement Learning",
+      "authors": ["Chenhua Fan", "Jiahui Zhu", "Yuhang Zhang", "Honghao Wei"],
+      "image": "images/bspg-cdc2026.png",
+      "image_alt": "Figure 2: BSPG and ESPO update trajectories on a synthetic constrained problem, illustrating BSPG approaching the active constraint boundary.",
+      "paper": "https://arxiv.org/pdf/2608.10204",
+      "citation_key": "fan2026boundary",
+      "image_source": "https://arxiv.org/html/2608.10204v1/result/small_bspg_vs_espo_trajectory.png"
+    },
+    {
       "venue": "TMLR",
       "year": 2026,
       "title": "Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning",

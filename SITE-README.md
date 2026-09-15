@@ -36,3 +36,5 @@ The sharing image is `images/og.png`, generated with the built-in image-generati
 The site uses a Tiffany blue palette, slightly larger type, full-width publication figures, and a Blogs section. Contact icons reuse the bundled Font Awesome and Academicons fonts, with accessible names and hover labels.
 
 School logo sources: the WSU cougar SVG is extracted from the official https://www.wsu.edu/ homepage; the Boston University plate is from https://www.bu.edu/home/img/masterplate112x50-retina.png, referenced by its homepage stylesheet. Logos retain their university colors and proportions.
+
+The IEEE CDC 2026 entry, “Boundary-Seeking Policy Gradient for Safe Reinforcement Learning,” uses Figure 2 from https://arxiv.org/abs/2608.10204 (v1). `images/bspg-cdc2026.png` is the unmodified original figure from the arXiv HTML version, showing BSPG and ESPO trajectories on the paper’s synthetic constrained problem. This is a method illustration, not the Safety-Gymnasium experiment. Title and author order follow arXiv; the conference is confirmed by the author and arXiv’s CDC 2026 comment.

@@ -36,16 +36,16 @@
   <h3 id="year-{{ year }}" class="year-heading">{{ year }}<span></span></h3>
   {% for paper in site.data.profile.publications %}{% assign paper_year = paper.year | append: '' %}{% if paper_year == year %}
   <article id="paper-{{ paper.venue | downcase }}-{{ paper.year }}" class="paper-card">
-    <a class="paper-image-link" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure for {{ paper.title | escape }}"><span class="venue-badge">{{ paper.venue }} {{ paper.year }}</span><img src="{{ paper.image | relative_url }}" alt="Research figure for {{ paper.title | escape }}" loading="lazy"><span class="figure-hint">View figure ↗</span></a>
+    <a class="paper-image-link" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure for {{ paper.title | escape }}"><span class="venue-badge">{{ paper.venue_label | default: paper.venue }} {{ paper.year }}</span><img src="{{ paper.image | relative_url }}" alt="{% if paper.image_alt %}{{ paper.image_alt | escape }}{% else %}Research figure for {{ paper.title | escape }}{% endif %}" loading="lazy"><span class="figure-hint">View figure ↗</span></a>
     <div class="paper-info">
       <h4><a href="{{ paper.paper }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h4>
       <p class="authors">{% for author in paper.authors %}{% if author == 'Jiahui Zhu' %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
-      <p class="venue-name">{% case paper.venue %}{% when 'TMLR' %}Transactions on Machine Learning Research{% when 'ICLR' %}International Conference on Learning Representations{% when 'ICML' %}International Conference on Machine Learning{% endcase %}, {{ paper.year }}.</p>
+      <p class="venue-name">{% if paper.venue_name %}{{ paper.venue_name }}{% else %}{% case paper.venue %}{% when 'TMLR' %}Transactions on Machine Learning Research{% when 'ICLR' %}International Conference on Learning Representations{% when 'ICML' %}International Conference on Machine Learning{% endcase %}{% endif %}, {{ paper.year }}.</p>
       <div class="paper-links"><a href="{{ paper.paper }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>{% if paper.video %}<a href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video ↗</a>{% endif %}
-        <details class="citation"><summary>BibTeX</summary><div class="citation-panel"><button class="copy-citation" type="button">Copy</button><pre><code>@{% if paper.venue == 'TMLR' %}article{% else %}inproceedings{% endif %}{zhu{{ paper.year }}{{ paper.venue | downcase }},
+        <details class="citation"><summary>BibTeX</summary><div class="citation-panel"><button class="copy-citation" type="button">Copy</button><pre><code>@{% if paper.venue == 'TMLR' %}article{% else %}inproceedings{% endif %}{% raw %}{{% endraw %}{% if paper.citation_key %}{{ paper.citation_key }}{% else %}zhu{{ paper.year }}{{ paper.venue | downcase }}{% endif %},
   title = { {{- paper.title -}} },
   author = { {{- paper.authors | join: ' and ' -}} },
-  {% if paper.venue == 'TMLR' %}journal{% else %}booktitle{% endif %} = { {{- paper.venue -}} },
+  {% if paper.venue == 'TMLR' %}journal{% else %}booktitle{% endif %} = { {{- paper.venue_name | default: paper.venue -}} },
   year = { {{- paper.year -}} },
   url = { {{- paper.paper -}} }
 }</code></pre></div></details>
