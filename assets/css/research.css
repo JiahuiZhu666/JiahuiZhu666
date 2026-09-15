@@ -279,38 +279,71 @@ section[id],article[id],h3[id] {
   font-size:12px;
   color:var(--muted);
   margin:0}
+.experience-timeline {
+  border-left:2px solid var(--line);
+  margin-left:6px;
+  padding-left:24px}
 .experience-card {
-  padding:22px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:18px;
+  padding:18px 20px;
   margin-bottom:14px;
   background:var(--card);
   border:1px solid var(--line);
-  border-left:3px solid var(--highlight);
-  border-radius:13px;
+  border-radius:16px;
   box-shadow:var(--shadow)}
-.experience-heading {
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:8px 20px;
-  margin-bottom:10px}
-.experience-heading h3 {
-  font-size:22px;
-  margin:0}
-.experience-heading .date {
-  font-size:13px}
+.experience-card::before {
+  content:'';
+  position:absolute;
+  left:-32px;
+  top:24px;
+  width:12px;
+  height:12px;
+  border:3px solid var(--bg);
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 2px var(--tint)}
+.experience-info {
+  flex:1 1 300px;
+  min-width:0}
 .experience-role {
+  font-size:19px;
+  font-weight:600;
+  margin:0 0 4px}
+.experience-company {
+  color:var(--accent);
+  font-weight:500;
+  font-size:17px;
+  margin:0}
+.experience-meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:10px 0}
+.experience-meta>span {
+  padding:3px 10px;
+  border-radius:999px;
+  background:var(--tint);
+  color:var(--muted);
+  font-size:13px}
+.experience-description {
+  font-size:15px;
+  color:var(--muted);
+  margin:0}
+.experience-logo {
   display:flex;
   align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:5px}
-.experience-location {
-  color:var(--muted);
-  font-size:15px;
-  margin-bottom:14px}
-.experience-description {
-  margin:0}
+  flex:0 0 auto;
+  padding:16px 14px;
+  border-radius:12px;
+  background:#172e2b}
+.experience-logo img {
+  width:140px;
+  height:auto}
 .collaboration-note {
   font-size:15px;
   color:var(--muted)}

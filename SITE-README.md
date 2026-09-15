@@ -5,6 +5,7 @@ The site remains a Jekyll / GitHub Pages project. The redesign takes visual insp
 ## Edit content
 
 - `_data/profile.json`: publication titles, authors, links, profile links, and education.
+- The experience entry also lives in `_data/profile.json`. Its role-first timeline layout takes inspiration from the reference site; the internship details are supplied by the author. `images/companies/bytedance-logo.svg` is the unmodified white wordmark embedded in the official ByteDance homepage (https://www.bytedance.com/en/), displayed on a dark background in both themes.
 - `_includes/research-home.html`: introduction, research directions, news, writing cards, and talks.
 - `_posts/`: individual notes and presentations.
 - `files/`: downloadable slides, published with the site.

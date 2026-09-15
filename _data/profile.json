@@ -70,12 +70,14 @@
   "experience": [
     {
       "company": "ByteDance",
-      "role": "Research Scientist",
+      "role": "Research Scientist Intern",
       "type": "Internship",
-      "location": "San Jose, CA",
+      "location": "San Jose, CA, USA",
+      "logo": "images/companies/bytedance-logo.svg",
+      "logo_source": "https://www.bytedance.com/en/",
       "start": "2026-07",
       "end": null,
-      "description": "Developing AI agents to optimize advertising operations."
+      "description": "Research on AI agents for advertising optimization."
     }
   ],
   "education": [

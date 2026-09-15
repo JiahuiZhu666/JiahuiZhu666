@@ -12,17 +12,22 @@
 </section>
 <section id="experience" class="content-section">
   <h2>Experience</h2>
+  <div class="experience-timeline">
   {% for experience in site.data.profile.experience %}
   <article class="experience-card">
-    <div class="experience-heading">
-      <h3>{{ experience.company }}</h3>
-      <p class="date"><time datetime="{{ experience.start }}">{{ experience.start | append: '-01' | date: '%b %Y' }}</time> — {% if experience.end %}<time datetime="{{ experience.end }}">{{ experience.end | append: '-01' | date: '%b %Y' }}</time>{% else %}Present{% endif %}</p>
+    <div class="experience-info">
+      <h3 class="experience-role">{{ experience.role }}</h3>
+      <p class="experience-company">{{ experience.company }}</p>
+      <div class="experience-meta">
+        <span><span aria-hidden="true">📍</span> {{ experience.location }}</span>
+        <span><span aria-hidden="true">🗓️</span> <time datetime="{{ experience.start }}">{{ experience.start | append: '-01' | date: '%b %Y' }}</time> — {% if experience.end %}<time datetime="{{ experience.end }}">{{ experience.end | append: '-01' | date: '%b %Y' }}</time>{% else %}Present{% endif %}</span>
+      </div>
+      <p class="experience-description">{{ experience.description }}</p>
     </div>
-    <p class="experience-role"><strong>{{ experience.role }}</strong><span class="tag">{{ experience.type }}</span></p>
-    <p class="experience-location">{{ experience.location }}</p>
-    <p class="experience-description">{{ experience.description }}</p>
+    <span class="experience-logo"><img src="{{ experience.logo | relative_url }}" alt="{{ experience.company }} logo" width="256" height="44" loading="lazy"></span>
   </article>
   {% endfor %}
+  </div>
 </section>
 <section id="research" class="content-section">
   <h2>Research Interests</h2>

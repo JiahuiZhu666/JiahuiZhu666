@@ -51,10 +51,12 @@ experiences = profile.fetch('experience')
 cards = home ? home.css('#experience .experience-card') : []
 errors << 'Experience count does not match source data' unless cards.length == experiences.length
 experiences.zip(cards).each do |experience, card|
-  %w[company role type location description].each do |field|
+  %w[company role location description].each do |field|
     errors << "Experience missing #{field}" unless card && card.text.include?(experience.fetch(field))
   end
   errors << 'Experience start date missing' unless card && card.css('time').any? { |time| time['datetime'] == experience.fetch('start') }
+  logo = card && card.at_css('.experience-logo img')
+  errors << 'Experience logo missing' unless logo && logo['src'] == base + '/' + experience.fetch('logo') && logo['alt'] == experience.fetch('company') + ' logo'
   errors << 'Current experience must say Present' if experience['end'].nil? && !(card && card.text.include?('Present'))
 end
 errors << 'Experience navigation missing' unless home && home.at_css('.site-nav a[data-section="experience"]')
